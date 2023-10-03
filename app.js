@@ -32,3 +32,13 @@ for(let i=0;i<100;i++){
     console.log(ctx.strokeStyle);
     ctx.closePath();
 }
+ctx.clearRect(0,0,innerWidth,innerHeight);
+let x=200;
+function animate(){
+    requestAnimationFrame(animate);
+    ctx.beginPath();
+    ctx.arc(x,200,30,0,2*Math.PI);
+    x++;
+    ctx.stroke();
+}
+animate();
