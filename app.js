@@ -41,4 +41,11 @@ function animate(){
     x++;
     ctx.stroke();
 }
-animate();
+// animate();
+
+
+window.addEventListener('resize',(event)=>{
+    console.log(event);
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+})
