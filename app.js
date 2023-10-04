@@ -49,3 +49,16 @@ window.addEventListener('resize',(event)=>{
     c.width = window.innerWidth;
     c.height = window.innerHeight;
 })
+
+window.addEventListener('mousemove',(event)=>{
+    console.log(event);
+   if(event.ctrlKey){
+       ctx.beginPath();
+       ctx.closePath();
+       ctx.beginPath();
+           ctx.strokeStyle = "blue";
+        ctx.rect(event.x,event.y,1,1)
+           ctx.stroke();  
+
+   }
+})
